@@ -48,7 +48,6 @@ export default function Splash() {
             withTiming(50, undefined, () => (contentDisplay.value = 1)),
             withTiming(-dimensions.height, { duration: 400 })
           )
-
           runOnJS(onEndSplash)()
         }
       })
@@ -69,12 +68,10 @@ export default function Splash() {
 
   function boxes(column: "right" | "left") {
     const rest = column === "left" ? 0 : 1
-
     return Array.from({ length: 20 })
       .filter((_, index) => index % 2 === rest)
       .map((_, index) => {
         const height = index % 2 === (column === "left" ? 0 : 1) ? 200 : 300
-
         return (
           <Animated.View key={index} style={[styles.box, { height }]}>
             <Skeleton colors={skeletonColors} width="100%" height={height} />
@@ -85,7 +82,7 @@ export default function Splash() {
 
   function onEndSplash() {
     setTimeout(() => {
-      router.push("/tabs")
+      router.push('./(tabs)')
     }, 2000)
   }
 

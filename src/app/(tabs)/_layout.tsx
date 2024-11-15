@@ -75,7 +75,7 @@ export default function TabLayout() {
             tabBarIcon: ({ color }) => (
               <Avatar
                 selected={color === theme.colors.white}
-                source={{ uri: "https://github.com/orodrigogo.png" }}
+                source={{ uri: "https://github.com/ronaldotorre2.png" }}
               />
             ),
           }}
